@@ -28,5 +28,5 @@ pip install --ignore-installed --upgrade ${TF_BINARY_URL}
 
 - Test that the install has been successful
 ```bash
-python -c "import graphlab"
+python -c "import tensorflow"
 ```
