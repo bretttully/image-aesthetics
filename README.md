@@ -4,7 +4,7 @@
 
 - Get CUDA 7.5 from https://developer.nvidia.com/cuda-downloads
 ```bash
-sudo apt-get install nvidia-cuda-toolkit
+sudo apt install nvidia-cuda-toolkit
 ```
 
 - Get cuDNN v4 from https://developer.nvidia.com/cudnn -- this will require signing 
@@ -29,4 +29,12 @@ pip install --ignore-installed --upgrade ${TF_BINARY_URL}
 - Test that the install has been successful
 ```bash
 python -c "import tensorflow"
+```
+
+- Install `bazel`: see [here](http://www.bazel.io/versions/master/docs/install.html#install-on-ubuntu)
+```bash
+echo "deb [arch=amd64] http://storage.googleapis.com/bazel-apt stable jdk1.8" | sudo tee /etc/apt/sources.list.d/bazel.list
+curl https://storage.googleapis.com/bazel-apt/doc/apt-key.pub.gpg | sudo apt-key add -
+sudo apt update
+sudo apt install bazel swig
 ```
